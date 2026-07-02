@@ -6,7 +6,8 @@ import { useHealth } from '@/lib/hooks';
 import styles from './Navbar.module.css';
 
 const NAV_ITEMS = [
-  { label: 'Dashboard',        href: '/' },
+  { label: 'Home',             href: '/' },
+  { label: 'Dashboard',        href: '/dashboard' },
   { label: 'Recommendations',  href: '/recommendations' },
   { label: 'Explorer',         href: '/explorer' },
   { label: 'Compare',          href: '/compare' },

@@ -13,7 +13,7 @@ export default function CandidateDetailsPage({ params }: { params: { id: string 
   
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.backLink}>&larr; Back to Leaderboard</Link>
+      <Link href="/dashboard" className={styles.backLink}>&larr; Back to Leaderboard</Link>
       
       <header className={styles.header}>
         <div>
