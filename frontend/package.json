@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev-poll": "set NODE_OPTIONS=--max-old-space-size=4096 && set CHOKIDAR_USEPOLLING=1 && set WATCHPACK_POLLING=true && next dev",
+    "dev": "next dev --webpack",
+    "dev-poll": "set NODE_OPTIONS=--max-old-space-size=4096 && set CHOKIDAR_USEPOLLING=1 && set WATCHPACK_POLLING=true && next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
