@@ -1,7 +1,7 @@
 'use client';
 
 import { useCandidates } from '@/lib/hooks';
-import styles from '../page.module.css';
+import styles from './compare.module.css';
 
 export default function ComparePage() {
   const { data, isLoading, isError } = useCandidates(1, 2);

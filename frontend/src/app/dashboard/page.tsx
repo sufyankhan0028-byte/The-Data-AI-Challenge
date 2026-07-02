@@ -3,7 +3,7 @@
 import { useCandidates } from '@/lib/hooks';
 import { RunRankingBtn } from '@/components/ui/RunRankingBtn';
 import { UploadFileBtn } from '@/components/ui/UploadFileBtn';
-import styles from '../page.module.css';
+import styles from './dashboard.module.css';
 
 export default function DashboardPage() {
   const { data, isLoading, isError } = useCandidates(1, 5);

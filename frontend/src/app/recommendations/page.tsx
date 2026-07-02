@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useCandidates } from '@/lib/hooks';
 import { getCandidates } from '@/lib/api';
-import styles from '../page.module.css';
+import styles from './recommendations.module.css';
 
 const PAGE_SIZE = 10;
 

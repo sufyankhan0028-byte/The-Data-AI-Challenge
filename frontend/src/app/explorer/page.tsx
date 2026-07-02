@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useCandidates } from '@/lib/hooks';
-import styles from '../page.module.css';
+import styles from './explorer.module.css';
 
 export default function ExplorerPage() {
   const [search, setSearch] = useState('');
