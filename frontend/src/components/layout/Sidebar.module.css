@@ -1,0 +1,188 @@
+/* ── Sidebar Shell ────────────────────────────────────────── */
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-default);
+  z-index: 100;
+  padding: 0;
+  box-shadow: 2px 0 16px rgba(15,23,42,0.04);
+}
+
+/* ── Logo ─────────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  background: var(--accent-grad);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(79,110,247,0.3);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logoName {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.logoSub {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ── Section ──────────────────────────────────────────────── */
+.section {
+  padding: 22px 12px 8px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
+  padding: 0 10px 10px;
+  text-transform: uppercase;
+}
+
+/* ── Nav ──────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navItem:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  transform: translateX(2px);
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.18s;
+}
+
+/* ── Active State ─────────────────────────────────────────── */
+.active {
+  background: #EEF2FF;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.active .navIcon {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.active:hover {
+  background: #E8EDFF;
+  transform: none;
+}
+
+/* ── Bottom ───────────────────────────────────────────────── */
+.bottom {
+  padding: 0 12px 18px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-default);
+  margin-bottom: 12px;
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: var(--radius-md);
+  transition: background 0.18s;
+  cursor: pointer;
+}
+
+.userRow:hover {
+  background: var(--bg-elevated);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-grad);
+  color: white;
+  font-size: 12.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(79,110,247,0.35);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.userRole {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  font-weight: 400;
+}

@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #a3a3a3;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.compareGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.candCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardHeader h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.cardHeader p {
+  margin: 0;
+  color: #a3a3a3;
+  font-size: 0.95rem;
+}
+
+.bigScore {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.metricRow span {
+  color: #a3a3a3;
+}
+
+.metricRow strong {
+  color: var(--foreground);
+}
+
+.skillsSection h4 {
+  margin: 0 0 12px 0;
+  color: var(--foreground);
+}
+
+.skillList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}

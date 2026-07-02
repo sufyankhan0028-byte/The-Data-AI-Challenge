@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backLink {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+
+.backLink:hover {
+  color: var(--foreground);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #a3a3a3;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.scoreHighlight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.scoreHighlight span {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.bigScore {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainCard {
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.explanation {
+  color: #d4d4d4;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.contradictionList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #ffb3b3;
+  line-height: 1.6;
+}
+
+.contradictionList li {
+  margin-bottom: 8px;
+}
+
+.skillList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.metricsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metricsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metricsList li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metricsList span {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+}
+
+.metricsList strong {
+  color: var(--foreground);
+}

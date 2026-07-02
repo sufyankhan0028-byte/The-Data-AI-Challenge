@@ -1,0 +1,23 @@
+# Byte-compiled
+__pycache__/
+*.pyc
+*.pyo
+
+# Data (large files — do not commit)
+data/raw/*.jsonl
+data/raw/*.json
+data/processed/*.parquet
+data/embeddings/*.npy
+data/embeddings/*.json
+data/outputs/*.csv
+
+# Environment
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

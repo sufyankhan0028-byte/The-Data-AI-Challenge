@@ -1,0 +1,62 @@
+# ── Environment Variables & Secrets (NEVER COMMIT) ──
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+
+# ── Large Datasets & Generated Data ──
+candidates.jsonl
+*.parquet
+*.npy
+*.db
+*.sqlite
+backend/data/raw/*
+!backend/data/raw/.gitkeep
+backend/data/processed/*
+!backend/data/processed/.gitkeep
+backend/data/embeddings/*
+!backend/data/embeddings/.gitkeep
+backend/data/outputs/*
+!backend/data/outputs/.gitkeep
+backend/data/index/*
+!backend/data/index/.gitkeep
+
+# ── Python / Backend Cache & Virtual Envs ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+*.log
+
+# ── Node / Frontend Build & Cache ──
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── IDE & OS Misc ──
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.gemini/

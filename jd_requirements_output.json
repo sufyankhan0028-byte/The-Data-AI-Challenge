@@ -1,0 +1,67 @@
+{
+  "must_have_skills": [
+    "Fine-tuning",
+    "XGBoost",
+    "LLM",
+    "Elasticsearch",
+    "Embeddings",
+    "Pinecone",
+    "Weaviate",
+    "OpenAI API",
+    "Milvus",
+    "FAISS",
+    "TensorFlow",
+    "Go",
+    "LangChain",
+    "Python",
+    "Git",
+    "Rust",
+    "REST API",
+    "RAG",
+    "Computer Vision",
+    "A/B Testing",
+    "NLP",
+    "TypeScript",
+    "Reinforcement Learning",
+    "R"
+  ],
+  "nice_to_have_skills": [],
+  "preferred_skills": [],
+  "required_experience_min": 5.0,
+  "required_experience_max": 9.0,
+  "required_industries": [
+    "EdTech / Education",
+    "E-Commerce / Retail",
+    "Logistics / Supply Chain",
+    "Automotive",
+    "Manufacturing / Industry",
+    "Consulting"
+  ],
+  "seniority_level": "senior",
+  "leadership_requirements": {
+    "requires_management": true,
+    "technical_lead": true,
+    "signals": [
+      "hiring ",
+      "tech lead"
+    ]
+  },
+  "startup_requirements": {
+    "is_startup": true,
+    "fast_paced": true,
+    "signals": [
+      "series a",
+      "move fast",
+      "scrappy",
+      "startup",
+      "early-stage"
+    ]
+  },
+  "production_ml_requirements": false,
+  "negative_signals": [],
+  "location_requirements": {
+    "city": "Mumbai",
+    "country": "India"
+  },
+  "work_mode_requirements": "hybrid"
+}
