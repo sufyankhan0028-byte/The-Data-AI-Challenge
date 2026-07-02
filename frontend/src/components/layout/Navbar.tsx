@@ -8,7 +8,6 @@ import styles from './Navbar.module.css';
 const MARKETING_ITEMS = [
   { label: 'Capabilities',     href: '#features' },
   { label: 'Workflow',         href: '#workflow' },
-  { label: 'Leaderboard',      href: '/recommendations' },
 ];
 
 const APP_ITEMS = [
