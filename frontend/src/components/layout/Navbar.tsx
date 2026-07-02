@@ -5,8 +5,13 @@ import { usePathname } from 'next/navigation';
 import { useHealth } from '@/lib/hooks';
 import styles from './Navbar.module.css';
 
-const NAV_ITEMS = [
-  { label: 'Home',             href: '/' },
+const MARKETING_ITEMS = [
+  { label: 'Capabilities',     href: '#features' },
+  { label: 'Workflow',         href: '#workflow' },
+  { label: 'Leaderboard',      href: '/recommendations' },
+];
+
+const APP_ITEMS = [
   { label: 'Dashboard',        href: '/dashboard' },
   { label: 'Recommendations',  href: '/recommendations' },
   { label: 'Explorer',         href: '/explorer' },
@@ -30,13 +35,17 @@ function StatusDot() {
 
 export function Navbar() {
   const pathname = usePathname();
+  const isLanding = pathname === '/' || pathname === '';
+
+  const navItems = isLanding ? MARKETING_ITEMS : APP_ITEMS;
+  const logoHref = isLanding ? '/' : '/dashboard';
 
   return (
     <header className={styles.navbar}>
       <div className={styles.inner}>
 
         {/* ── Logo ── */}
-        <Link href="/" className={styles.logo}>
+        <Link href={logoHref} className={styles.logo}>
           <div className={styles.logoMark}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -48,9 +57,9 @@ export function Navbar() {
 
         {/* ── Nav Items ── */}
         <nav className={styles.nav}>
-          {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href ||
-              (item.href !== '/' && pathname?.startsWith(item.href));
+          {navItems.map((item) => {
+            const isActive = !isLanding && (pathname === item.href ||
+              (item.href !== '/dashboard' && pathname?.startsWith(item.href)));
             return (
               <Link
                 key={item.href}
@@ -71,15 +80,23 @@ export function Navbar() {
             <span className={styles.statusLabel}>API</span>
           </div>
 
-          <Link href="/settings" className={styles.settingsBtn} title="Settings">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-            </svg>
-          </Link>
+          {isLanding ? (
+            <Link href="/dashboard" className={styles.enterBtn}>
+              Enter Dashboard &rarr;
+            </Link>
+          ) : (
+            <>
+              <Link href="/settings" className={styles.settingsBtn} title="Settings">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </Link>
 
-          <div className={styles.avatar}>R</div>
+              <div className={styles.avatar}>R</div>
+            </>
+          )}
         </div>
 
       </div>
