@@ -90,7 +90,7 @@ def _generate_candidates(top_k: int = 100, weights=None) -> List[Dict[str, Any]]
         candidates.append({
             "rank":                i + 1,
             "candidate_id":        f"CAND_{str(i + 1).zfill(7)}",
-            "name":                _mask_name(full_name),
+            "name":                full_name,
             "title":               random.choice(TITLES),
             "yoe":                 yoe,
             "score":               final_score,

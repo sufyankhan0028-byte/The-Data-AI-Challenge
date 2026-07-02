@@ -6,7 +6,7 @@ import { UploadFileBtn } from '@/components/ui/UploadFileBtn';
 import styles from './dashboard.module.css';
 
 export default function DashboardPage() {
-  const { data, isLoading, isError } = useCandidates(1, 5);
+  const { data, isLoading, isError } = useCandidates(1, 10);
 
   const candidates = data?.candidates ?? [];
   const total      = data?.total ?? 0;
