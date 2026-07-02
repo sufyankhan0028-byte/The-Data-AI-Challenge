@@ -12,6 +12,7 @@ const MARKETING_ITEMS = [
 ];
 
 const APP_ITEMS = [
+  { label: 'Home',             href: '/' },
   { label: 'Dashboard',        href: '/dashboard' },
   { label: 'Recommendations',  href: '/recommendations' },
   { label: 'Explorer',         href: '/explorer' },
@@ -38,14 +39,13 @@ export function Navbar() {
   const isLanding = pathname === '/' || pathname === '';
 
   const navItems = isLanding ? MARKETING_ITEMS : APP_ITEMS;
-  const logoHref = isLanding ? '/' : '/dashboard';
 
   return (
     <header className={styles.navbar}>
       <div className={styles.inner}>
 
         {/* ── Logo ── */}
-        <Link href={logoHref} className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <div className={styles.logoMark}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
